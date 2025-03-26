@@ -1,0 +1,161 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.section--hero {
+  background: linear-gradient(135deg, #da0d0d, #f8e80a);
+}
+.section--drag {
+  background-color: #82df17;
+}
+.section--notifications {
+  background: linear-gradient(135deg, #0eecc7, #0804e4);
+}
+.section--geolocation {
+  background-color: #6b14db;
+}
+.section--contact {
+  background: linear-gradient(135deg, #e40dd9, #f30707);
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(7, 207, 17, 0.1);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+.drop-area {
+  border: 2px dashed #0516f7;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #007bff;
+  margin: 20px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.drop-area.highlight {
+  background-color: #e1f0ff;
+}
+@media (max-width: 480px) {
+  .drop-area {
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+.file-info, .file-content, .geo-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #dad9d9;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+@media (max-width: 480px) {
+  .file-info, .file-content, .geo-info {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+.notify-button, .geo-button {
+  background-color: #10ec34;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.notify-button:hover, .geo-button:hover {
+  background-color: #0062cc;
+}
+@media (max-width: 480px) {
+  .notify-button, .geo-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+.animated-text {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+.animated-text:hover {
+  animation: pulse 1s infinite;
+}
+
